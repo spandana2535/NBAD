@@ -1,0 +1,19 @@
+<%- include('../partials/header.ejs')%>
+<div class="manage-offer">
+<h1>Manage offer View</h1>
+<table>
+    <tr>
+      <th>Offer For You</th>
+      <th>Your Item</th>
+    </tr>
+    <tr>
+      <td> <a href="/items/<%= item.id%>"> <%= item.Name%></a> </td>
+      <td> <a href="/"> <%= item.offerName%></td> </a>
+    </tr>
+  </table>
+  <div id = "form">
+    <form action='/nav/<%= offer.id%>/offer?_method=delete' method="post">
+    <button type="submit">Cancel Offer</button>
+  </form>
+</div>
+<%- include('../partials/footer.ejs')%>

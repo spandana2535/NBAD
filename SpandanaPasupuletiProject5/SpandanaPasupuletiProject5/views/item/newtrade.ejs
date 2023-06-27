@@ -1,0 +1,44 @@
+<%- include('../partials/header.ejs')%>
+<div id="newtrade-content">
+  <form action="/items" method="POST">
+    <label for="Category">Category</label>
+    <input
+      type="text"
+      name="Category"
+      id="Category"
+      placeholder="Category"
+      required
+    />
+    <br />
+    <br />
+    <label for="Name">Product Name</label>
+    <input type="text" name="Name" id="Name" placeholder="Name" required />
+    <br />
+    <br />
+    <label for="StoreAddress">Store Address</label>
+    <input
+      type="text"
+      name="StoreAddress"
+      id="StoreAddress"
+      placeholder="StoreAddress"
+      required
+    />
+    <br />
+    <br />
+    <label for="Details" id="Details-label">Details</label>
+    <textarea
+      type="text"
+      name="Details"
+      id="Details"
+      placeholder="Details"
+      rows="10"
+      cols="65"
+      required
+      minlength="10"
+    ></textarea>
+    <br />
+    <br />
+    <button type="Submit">Add Item</button>
+  </form>
+</div>
+<%- include('../partials/footer.ejs')%>

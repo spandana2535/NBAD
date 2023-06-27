@@ -1,0 +1,67 @@
+<%- include('../partials/header.ejs')%>
+<div id="trade-content">
+  <h2><%= item.Name%></h2>
+  <img id="trade-image" src="/images/trade-image.png" alt="Item image" />
+  <p><b> Category:</b> <%= item.Category%></p>
+  <p><b> Details:</b> <%= item.Details%></p>
+  <p><b> StoreAddress:</b> <%= item.StoreAddress%></p>
+  <p>
+    <b> CreatedBy:</b> <%= item.CreatedBy.firstName + ' ' +
+    item.CreatedBy.lastName%>
+  </p>
+
+  <br /><br />
+  <%if(user== item.CreatedBy._id){%>
+  <div id="function-buttons">
+    <form action="/items/<%= item.id%>/edit" method="get">
+      <button type="submit" class="function-buttons">Edit</button>
+    </form>
+    <form action="/items/<%= item.id%>?_method=delete" method="post">
+      <button type="submit" class="function-buttons">Delete</button>
+    </form>
+  </div>
+  <%}%>
+  <div id="trade-buttons">
+    <form action="/items/<%= item.id%>" method="post">
+      <label for="quantity">Quantity</label>
+      <input
+        type="number"
+        id="quantity"
+        name="quantity"
+        step="1"
+        min="1"
+        max="20"
+        required
+      />
+      <button type="submit" class="trade-buttons">Add to cart</button>
+    </form>
+
+    <%if(item.Saved===false){%>
+    <form action="/items/<%= item.id%>/save" method="post">
+      <label for="Name"></label><br />
+      <input
+        type="hidden"
+        id="Name"
+        name="Name"
+        value="<%= item.Name%>"
+        required
+      />
+      <button type="submit" class="trade-buttons" id="save">
+        Save for Later
+      </button>
+    </form>
+  <%}else{%>
+    <form
+    action="/items/<%= item.id%>/savedelete?_method=delete"
+    method="post">
+    <button type="submit" class="function-buttons">UnSave</button>
+  </form>
+  <%}%>
+    <%if(!(user== item.CreatedBy._id)&&item.Status=="Available"){%>
+    <form action="/items/<%= item.id%>/trade" method="get">
+      <button type="submit" class="trade-buttons">Trade</button>
+    </form>
+    <%}%>
+  </div>
+</div>
+<%- include('../partials/footer.ejs')%>

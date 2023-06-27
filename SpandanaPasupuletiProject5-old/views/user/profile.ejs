@@ -1,0 +1,88 @@
+<%- include('../partials/header.ejs')%>
+<div id="profile-page">
+  <h2>Welcome, <%= user.firstName%> <%=user.lastName%></h2> 
+  <p><b> Your Trades</b></p>
+  <%if(items.length){%>
+    <table id = "trades-table">
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+         <%items.forEach(item=>{%>
+      <tr>
+        <td><a href="/items/<%= item.id%>"> <span><%= item.Name%></span> </a></td>
+        <td><%= item.Category%></td>
+        <td><%= item.Status%></td>
+        <td>
+          <div class="function-buttons-profile">
+            <form action="/items/<%= item.id%>/edit" method="get">
+              <button type="submit" >Update</button>
+            </form>
+            <form action="/items/<%= item.id%>?_method=delete" method="post">
+              <button type="submit">Delete</button>
+            </form>
+            <%if(item.Status==="Offer Pending"){%>
+            <form action="/items/<%= item.id%>/manage" method="get">
+              <button type="submit">ManageOffer</button>
+            </form>
+          <%}%>
+          </div>
+        </td>
+      </tr> <br>
+
+  <%});%> 
+</table><%}else{%>
+  
+  <p>You haven't created any items yet.</p>
+  <%};%>
+  <p><b>Your Wishlist:</b></p>
+  <%if(saves.length){%> 
+    <table id = "wishlist-table">
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    <%saves.forEach(save=>{%>
+      <tr>
+        <td><a href="/items/<%= save.id%>"><p><%= save.Name%></p></a></td>
+        <td><p><%= save.Category%></td>
+        <td><p><%= save.Status%></td>
+          <td><form action='/nav/<%= save.id%>?_method=delete' method = 'post'>
+        <button type = 'submit'class = 'function-buttons'>UnWatch</button>
+        </form></td>
+      </tr>
+  <%});%> 
+</table><%}else{%>
+  <p>You haven't saved any items.</p>
+  <%};%>
+
+
+  <p><b>Your Offers</b></p>
+  <%if(offers.length){%> 
+    <table id = "offers-table">
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    <%offers.forEach(offer=>{%>
+      <tr>
+        <td><a href="/items/<%= offer.id%>"><p><%= offer.Name%></p></a></td>
+        <td><p><%= offer.Category%></td>
+        <td><p><%= offer.Status%></td>
+          <td><form action='/nav/<%= offer.id%>/offer?_method=delete' method = 'post'>
+        <button type = 'submit'class = 'function-buttons'>Cancel Offer</button>
+        </form></td>
+      </tr>
+  <%});%> 
+</table><%}else{%>
+  <p>No Offers!!</p>
+  <%};%>
+
+</div>
+<%- include('../partials/footer.ejs')%>

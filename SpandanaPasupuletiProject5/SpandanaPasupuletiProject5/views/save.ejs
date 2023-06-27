@@ -1,0 +1,22 @@
+<%- include('./partials/header.ejs')%>
+<div id = "cart-content">
+  <h2>Welcome to your Wishlist, <%= user.firstName%> <%=user.lastName%></h2>
+  <h2>Items in Wishlist</h2>
+  <%if(items.length){%>
+    <%for(var i = 0; i<items.length;i++){%>
+      <ul>
+        <li>
+      <a href="/nav/save/<%= items[i]._id%>"  <span><%= items[i].Name%></span> </a>
+      <form action='/nav/<%= items[i].id%>?_method=delete' method = 'post'>
+        <button type = 'submit'class = 'function-buttons'>Delete</button>
+        </form>
+    </li>
+    </ul>
+    <%}%>
+        <%}else{%>
+        <p>Your Wishlist is empty!</p>
+        <%}%>
+</div>
+
+
+<%- include('./partials/footer.ejs')%>

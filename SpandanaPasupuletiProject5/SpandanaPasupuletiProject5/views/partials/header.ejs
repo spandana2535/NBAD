@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>
+            Organic Store Web page
+        </Title>
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <header>
+<a href='/'>
+    <img id = "oragnic-logo"src="/images/vegetable.png" alt="Organic Logo"> 
+</a>
+<p id = "logo"> Fresh and Healthy </p>
+<hr>
+<div id = "buttons">
+<a href="/items"> <span id = "explore">Explore!</span></a>
+<a href="/items/new">  <p id = "join-us">New Trade</p> </a>
+<%if(!user){%>
+<a href="/nav/login"><span id = "login">Login</span></a>
+<a href="/nav/signup"><span id = "signup">Signup</span></a>
+<%}else{%>
+<a href='/nav/profile'><span id = "profile">Profile</a>
+<a href='/nav/logout'><span id = "logout">Logout</a> 
+<a href="/nav/cart"><span id = "cart">Cart</span></a>
+<a href="/nav/save"><span id = "Wishlist">Wishlist</span></a>
+<%}%>
+</div>
+        </header>
+
+        <%if(successMessages.length>0){%>
+            <%successMessages.forEach(message=>{%>
+            <div class = 'success'>   <%= message%> </div>
+            <%});%>
+        <%};%>
+    
+        <%if(errorMessages.length>0){%>
+            <%errorMessages.forEach(message=>{%>
+               <div class = 'error'> <%= message%> </div>
+            <%});%>
+        <%};%>

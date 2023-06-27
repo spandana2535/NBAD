@@ -1,0 +1,145 @@
+[{
+  "_id": {
+    "$oid": "625f31237b11c587fa4c9983"
+  },
+  "Name": "Apple",
+  "Category": "Fruit",
+  "Details": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus.",
+  "StoreAddress": "ABC, EFG lane, HIJ City",
+  "CreatedBy": {
+    "$oid": "625f304c7b11c587fa4c9978"
+  },
+  "__v": 0,
+  "Status": "Available",
+  "offerName": "",
+  "Saved": false,
+  "Offered": false
+},{
+  "_id": {
+    "$oid": "625f337a7b11c587fa4c9989"
+  },
+  "Name": "Cumin seeds",
+  "Category": "Groceries",
+  "Details": "Cumin seeds.",
+  "StoreAddress": "ABC, EFG lane, HIJ City",
+  "CreatedBy": {
+    "$oid": "625f304c7b11c587fa4c9978"
+  },
+  "__v": 0,
+  "Status": "Available",
+  "offerName": "",
+  "Saved": false,
+  "Offered": false
+},{
+  "_id": {
+    "$oid": "625f33c87b11c587fa4c998d"
+  },
+  "Name": "Potato",
+  "Category": "Vegetable",
+  "Details": "A popular root vegetable native to the Americas. Today they are a staple food in many parts of the world and an integral part of much of the world's food supply.",
+  "StoreAddress": "ABC, EFG lane, HIJ City",
+  "CreatedBy": {
+    "$oid": "625f304c7b11c587fa4c9978"
+  },
+  "__v": 0,
+  "Status": "Available",
+  "offerName": "",
+  "Saved": false,
+  "Offered": false
+},{
+  "_id": {
+    "$oid": "625f34c47b11c587fa4c99a5"
+  },
+  "Name": "Onion",
+  "Category": "Vegetable",
+  "Details": "A vegetable that is the most widely cultivated species, As a food item, they are usually served cooked, as a vegetable or as part of a prepared savory dish, but can also be eaten raw or used to make pickles or chutneys.",
+  "StoreAddress": "9309 Kittanset Dr, Charlotte",
+  "CreatedBy": {
+    "$oid": "625f34897b11c587fa4c999e"
+  },
+  "__v": 0,
+  "Status": "Available",
+  "offerName": "",
+  "Saved": false,
+  "Offered": false
+},{
+  "_id": {
+    "$oid": "625f34f07b11c587fa4c99a9"
+  },
+  "Name": "Green Beans",
+  "Category": "Vegetable",
+  "Details": "A bean is the seed of one of several genera of the flowering plant family Fabaceae, which are used as vegetables for human or animal food.",
+  "StoreAddress": "ABC, EFG lane, HIJ City",
+  "CreatedBy": {
+    "$oid": "625f34897b11c587fa4c999e"
+  },
+  "__v": 0,
+  "Status": "Available",
+  "offerName": "",
+  "Saved": false,
+  "Offered": false
+},{
+  "_id": {
+    "$oid": "625f351e7b11c587fa4c99ae"
+  },
+  "Name": "Kiwi",
+  "Category": "Fruit",
+  "Details": "Kiwifruit or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia. The most common cultivar group of kiwifruit is oval.",
+  "StoreAddress": "ABC, EFG lane, HIJ City",
+  "CreatedBy": {
+    "$oid": "625f34897b11c587fa4c999e"
+  },
+  "__v": 0,
+  "Status": "Available",
+  "offerName": "",
+  "Saved": false,
+  "Offered": false
+},{
+  "_id": {
+    "$oid": "625f35497b11c587fa4c99b2"
+  },
+  "Name": "Orange",
+  "Category": "Fruit",
+  "Details": "Oranges are widely grown in tropical and subtropical climates for their sweet fruit. The fruit of the orange tree can be eaten fresh, or processed for its juice or fragrant peel.",
+  "StoreAddress": "ABC, EFG lane, HIJ City",
+  "CreatedBy": {
+    "$oid": "625f34897b11c587fa4c999e"
+  },
+  "__v": 0,
+  "Status": "Available",
+  "offerName": "",
+  "Saved": false,
+  "Offered": false
+},{
+  "_id": {
+    "$oid": "62705985cdf784569140aea2"
+  },
+  "Name": "Carrot",
+  "Category": "Vegetable",
+  "Details": "A popular sweet-tasting root vegetable, carrots are narrow and cone-shaped. They have thick, fleshy, deeply colored root, which grows underground, and feathery green leaves that emerge above the ground.",
+  "StoreAddress": "9309 Kittanset Dr, Charlotte",
+  "CreatedBy": {
+    "$oid": "625f304c7b11c587fa4c9978"
+  },
+  "__v": 0,
+  "Status": "Available",
+  "offerName": "",
+  "Saved": false,
+  "Offered": false
+},{
+  "_id": {
+    "$oid": "62784741756348738c24c9f0"
+  },
+  "Name": "Banana",
+  "Category": "Fruit",
+  "Details": "The fruit is variable in size, color, and firmness, but is usually elongated and curved, with soft flesh rich in starch covered with a rind, which may be green, yellow, red, purple, or brown when ripe.",
+  "StoreAddress": "9309 Kittanset Dr, Charlotte",
+  "CreatedBy": {
+    "$oid": "625f304c7b11c587fa4c9978"
+  },
+  "Status": "Available",
+  "offerName": "",
+  "Saved": false,
+  "Offered": false,
+  "__v": 0
+}]

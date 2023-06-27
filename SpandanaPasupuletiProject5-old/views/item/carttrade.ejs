@@ -1,0 +1,16 @@
+<%- include('../partials/header.ejs')%>
+<div id="carttrade-content">
+  <h2><%= item.Name%></h2>
+  <h4>Quantity : <%= item.Quantity%></h4>
+  <p>Added By : <%= item.AddedBy.firstName+ ' '+ item.AddedBy.lastName%></p>
+  <br /><br />
+  <div id="function-buttons">
+    <form action="/nav/cart/<%= item.id%>/edit" method="get">
+      <button type="submit" class="function-buttons">Edit</button>
+    </form>
+    <form action="/nav/cart/<%= item.id%>?_method=delete" method="post">
+      <button type="submit" class="function-buttons">Delete</button>
+    </form>
+  </div>
+</div>
+<%- include('../partials/footer.ejs')%>
